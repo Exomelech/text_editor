@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Consolas";
+  src: url(fonts/consolas.ttf) format("truetype");
+}
+
+@import url(http://allfont.ru/allfont.css?fonts=dejavu-sans-mono);
+@import './style/normalize.css';
+@import './style/editor.scss';
+
+// body {
+//   background-color: grey;
+// }

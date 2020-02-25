@@ -1,0 +1,62 @@
+.editor {
+  font-family: "DejaVu Sans Mono";
+  font-size: 14px;
+  cursor: text;
+  height: 100%;
+}
+
+.editor__char-size {
+  position: absolute;
+  top: -10000px;
+  user-select: none;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.editor__caret {
+  position: absolute;
+  padding: 0;
+  margin: 0 -1px;
+  user-select: none;
+  color: transparent;
+  z-index: 0;
+  border-left: 0px solid black;
+}
+
+.editor__caret-focus {
+  animation: caret-blink .5s step-end infinite alternate;
+}
+
+@keyframes caret-blink {
+  50% { border-left: 1px solid black; }
+}
+
+.editor__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.line {
+  display: inline-flex;
+}
+
+.line__id {
+  flex: none;
+  text-align: end;
+  width: 40px;
+  margin-right: 5px;
+  user-select: none;
+  &:after {
+    content: ":";
+  }
+}
+
+.line__input {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  white-space: pre;
+}
